@@ -1,0 +1,25 @@
+{% extends 'blog/detail_base.html' %}
+{% block content %}
+
+
+<div class="container-fluid">
+    <section class="intro">
+      <div class="card shadow-lg bg-light my-3">
+        <h2 class="display-4 mx-3 text-dark" style="font-family: Nunito Sans;"> {{ blog.title }}</h2>
+        <small class="mx-3 mb-2 text-dark text-muted" style="font-size: medium;">{{ blog.date_created|date:"F d, Y" }}</small>
+        <p class="mb-5 my-3 mx-3 text-dark" style="font-weight: 400;">{{ blog.body }}</p>
+      </div>
+        <hr>
+        <h2>Thanks for reading!</h2>
+        <p>
+            I would love to hear your thoughts :) <a href="https://twitter.com/bol_aguel" target="_blank" class="text-primary"> say hi on twitter <i class="fab fa-twitter"></i></a>
+        
+        <hr>
+        <a href="{% url 'home' %}" class="text-primary">&#8592;all posts</a>
+    </section>
+
+  
+</div>
+
+{% endblock content %}
+

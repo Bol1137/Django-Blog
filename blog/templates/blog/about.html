@@ -1,0 +1,109 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="{% static 'blog/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static  'blog/css/styles.css' %}" />
+    {% if title %}
+    <title>Bol Deng - {{ title }}</title>
+    {% else %}
+    <title>Thoughts in a Nutshell</title>
+    {% endif %}
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light shadow p-1 mb-5 bg-body rounded ">
+        <div class="container-lg">
+            <a class="navbar-brand" href="{% url 'home' %}" style="font-family: Nunito Sans; font-size: 30px;">B.d'Akok</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a style="font-family: Nunito Sans;" class="nav-link active " aria-current="page" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a style="font-family: Nunito Sans;" class="nav-link active mx-3" href="{% url 'about' %}">About</a>
+              </li>
+              
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    <div class="background"></div>
+    <div class="intro-left">
+    <div class="container-fluid full-height">
+        <div class="row text-center align-items-center full-height">
+        <div class="col">
+            <img src="{% static 'blog/img/av-3.jpg' %}" alt="User avatar" class="avatar" />
+            <p class="display-6 text-light name py-5" style="margin-top: -3rem;font-family: Nunito Sans;">Bol Deng</p>        </div>
+        </div>
+    </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-8 panel-right px-0">
+            <section class="quote">
+    <figure>
+    <blockquote class="blockquote">
+        <p style="font-family: Nunito Sans;">
+        “Fear of God is the beginning of wisdom.”
+        </p>
+    </blockquote>
+    <figcaption class="blockquote-footer" style="font-size: medium;">
+        Proverbs <cite title="Source Title">9:10</cite>
+    </figcaption>
+    </figure>
+</section>
+
+<section class="intro">
+    <h1 class="display-5" style="font-family: Nunito Sans;">Thoughts In a Nutshell</h1>
+    <p class="text-muted mb-5" style="font-size: medium;">A weekly blog where I write about anything</p>
+
+    <p>
+        <figcaption class="blockquote-footer"style="font-family: Nunito Sans;" >
+            Hey Friends &#128075;
+        </figcaption>
+        I'm Bol. I had a hard time thinking about what to write here and then I decide
+        to write about where most of my time goes. Currently I'm enrolled as a junior in 
+        the faculty of <b>Computers and Artificial Intelligence (FCAI)</b> at <b>Cairo University.</b>
+        Majoring in <b>Information Systems</b> expecting to graduate in the summer of 2022.
+        I play chess in my free time and <b>write</b> on this website 
+        and I also do some web development alongside playing chess and writing...check some of my recent project on my <a href="https://github.com/Bol1137">GitHub</a> account.
+    </p>
+    <h3>Conections:</h3>
+    <p><a href="https://twitter.com/bol_aguel">Twiiter</a></p>
+    <p><a href="https://www.linkedin.com/in/bol-deng-526361206/">Linkedin</a></p>
+    <hr>
+</section>
+
+    <footer class="footer p-4" style="background-color: rgb(20, 20, 20);">
+            <div class="container-fluid text-center my-3">
+            <div class="social-links m-auto">
+                <a href="https://www.facebook.com/bol.denga/" target="_blank" class="text-light  m-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/bol-deng-526361206/" target="_blank" class="text-light  m-2"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/bol_aguel" target="_blank" class="text-light  m-2"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/Bol1137" target="_blank" class="text-light  m-2"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+    
+
+
+    
+</body>
+</html> 
