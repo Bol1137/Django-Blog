@@ -2,12 +2,12 @@
 {% block content %}
 
 
-<div class="container-fluid">
-    <section class="intro">
-      <div class="card shadow-lg bg-light my-3">
-        <h2 class="display-4 mx-3 text-dark" style="font-family: Nunito Sans;"> {{ blog.title }}</h2>
-        <small class="mx-3 mb-2 text-dark text-muted" style="font-size: medium;">{{ blog.date_created|date:"F d, Y" }}</small>
-        <p class="mb-5 my-3 mx-3 text-dark" style="font-weight: 400;">{{ blog.body }}</p>
+
+    <!-- <section class="intro">
+      <div class=" my-3">
+        <h2 class="display-4  text-dark" style="font-family: Nunito Sans;"> {{ blog.title }}</h2>
+        <small class="text-dark text-muted" style="font-size: medium;">{{ blog.date_created|date:"F d, Y" }}</small>
+        <p class="mb-5 my-3 mx-4 text-dark" style="font-weight: 400;">{{ blog.body|safe }}</p>
       </div>
         <hr>
         <h2>Thanks for reading!</h2>
@@ -16,10 +16,26 @@
         
         <hr>
         <a href="{% url 'home' %}" class="text-primary">&#8592;all posts</a>
+    </section> -->
+
+    <section class="intro">
+      <div class="card my-3 shadow">
+        <div class="card-body">
+            
+            <h2 style="font-family: Nunito Sans;">{{ blog.title }}</h2>
+            <small style="font-size: medium;">{{ blog.date_created }}</small>
+            <hr>
+            <p>
+              {{ blog.body|safe }}
+            </p>
+        </div>
+    </div>
+
     </section>
+  
 
   
-</div>
+
 
 {% endblock content %}
 

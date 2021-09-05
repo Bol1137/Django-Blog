@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models.fields import TextField
+from tinymce.models import HTMLField
 
 # Create your models here.
 class Blog(models.Model):
